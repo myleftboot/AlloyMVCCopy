@@ -8,8 +8,8 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.018548 seconds on emulator to get ready
-[DEBUG] com.alloy.ccs installed? False
+[DEBUG] waited 0.023101 seconds on emulator to get ready
+[DEBUG] com.alloy.ccs installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -156,8 +156,9 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.022641 seconds on emulator to get ready
+[DEBUG] waited 0.019260 seconds on emulator to get ready
 [INFO] Installing application on emulator
-[ERROR] Failed installing com.alloy.ccs: 	pkg: /data/local/tmp/app.apk
-Failure [INSTALL_FAILED_INSUFFICIENT_STORAGE]
+[INFO] Launching application ... AlloyMVCCopy
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.alloy.ccs/.AlloymvccopyActivity }
 
+[INFO] Deployed AlloyMVCCopy ... Application should be running.

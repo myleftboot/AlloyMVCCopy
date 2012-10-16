@@ -2,7 +2,7 @@ function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     var $ = this, exports = {};
     $.__views.detail = A$(Ti.UI.createWindow({
-        backgroundColor: "#fff",
+        backgroundColor: "white",
         id: "detail"
     }), "Window", null);
     $.addTopLevelView($.__views.detail);

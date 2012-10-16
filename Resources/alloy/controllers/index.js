@@ -1,6 +1,6 @@
 function Controller() {
     function doClick(e) {
-        Alloy.createController("detail").getView().open();
+        $.navgroup.open(Alloy.createController("detail").getView());
         Ti.App.fireEvent("MVC:tab:itemSelected", {
             name: e.rowData.title,
             price: e.rowData.price
@@ -13,7 +13,29 @@ function Controller() {
         id: "index"
     }), "Window", null);
     $.addTopLevelView($.__views.index);
+    $.__views.MasterWindow = A$(Ti.UI.createWindow({
+        title: "Window 1",
+        id: "MasterWindow"
+    }), "Window", null);
+    var __alloyId1 = [];
+    $.__views.MasterTable = A$(Ti.UI.createTableView({
+        id: "MasterTable"
+    }), "TableView", $.__views.MasterWindow);
+    $.__views.MasterWindow.add($.__views.MasterTable);
+    $.__views.MasterTable.on("click", doClick);
+    $.__views.navgroup = A$(Ti.UI.iPhone.createNavigationGroup({
+        window: $.__views.MasterWindow,
+        id: "navgroup"
+    }), "NavigationGroup", $.__views.index);
+    $.__views.index.add($.__views.navgroup);
+    var __alloyId2 = [];
+    $.__views.MasterTable = A$(Ti.UI.createTableView({
+        id: "MasterTable"
+    }), "TableView", $.__views.MasterWindow);
+    $.__views.MasterWindow.add($.__views.MasterTable);
+    $.__views.MasterTable.on("click", doClick);
     _.extend($, $.__views);
+    Alloy.CFG.navgroup = $.navgroup;
     var tableData = [ {
         title: "Apples",
         price: "1.25",

@@ -1,5 +1,5 @@
-"Window": {
-	backgroundColor: '#fff'
+".container": {
+	backgroundColor: "white"
 },
 "Label": {
 	color: '#000',
