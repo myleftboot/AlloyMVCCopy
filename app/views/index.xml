@@ -1,0 +1,9 @@
+<Alloy>
+	<Window class="container">
+		<NavigationGroup id="navgroup" platform="ios,mobileweb">
+			<Window title="Window 1" id="MasterWindow">
+				<TableView id="MasterTable" onClick="doClick"></TableView>
+			</Window>
+		</NavigationGroup>
+	</Window>
+</Alloy>
