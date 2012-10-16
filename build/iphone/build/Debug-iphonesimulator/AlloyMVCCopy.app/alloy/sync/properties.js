@@ -1,0 +1,1 @@
+/Users/Darren/Work/AlloyMVCCopy/Resources/alloy/sync/properties.js
